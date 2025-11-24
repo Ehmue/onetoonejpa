@@ -1,0 +1,5 @@
+CREATE TABLE Account (
+    id BIGINT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    amount DOUBLE NOT NULL
+);
