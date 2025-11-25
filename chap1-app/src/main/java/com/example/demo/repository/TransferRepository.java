@@ -5,6 +5,6 @@ import com.example.demo.model.Amount;
 
 public interface TransferRepository 
 {
-	void transfer(Account accountA, Account accountB);
+	void transfer(Account accountA, Account accountB, Amount amount);
 
 }

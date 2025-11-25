@@ -7,6 +7,6 @@ import com.example.demo.model.Amount;
 public interface TransferService 
 {
 	
-	public void transferMoney(long fromid, long toid, Amount amount) throws SQLException;
+	public void transferMoney(Long fromid, Long toid, Amount amount) throws SQLException;
 	
 }

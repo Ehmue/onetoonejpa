@@ -12,23 +12,32 @@ import com.example.demo.repository.TransferRepository;
 public class TransferServiceImpl implements TransferService
 {
 
-	@Autowired
 	private AccountRepository accountRepository;
-	
-	@Autowired
 	private TransferRepository transferRepository;
 	
+	
+	
+	public TransferServiceImpl(AccountRepository accountRepository, TransferRepository transferRepository) 
+	{
+		this.accountRepository = accountRepository;
+		this.transferRepository = transferRepository;
+	}
+
+
+
 	@Override
-	public void transferMoney(long fromid, long toid, Amount amount) throws SQLException 
+	public void transferMoney(Long fromid, Long toid, Amount amount) throws SQLException 
 	{
 		//find account fromid
 		Account accountA = accountRepository.findById(fromid);
 		
 		//find account toid
-		Account accountB = accountRepository.findById1(toid);
+		Account accountB = accountRepository.findById(toid);
 		
 		//transfer to repository
-		transferRepository.transfer(accountA, accountB);
+		transferRepository.transfer(accountA, accountB, amount);
 	}
+
+
 	
 }
