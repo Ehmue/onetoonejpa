@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>User page</title>
+		<link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+	</head>
+	<body>
+		<div class="mt-10 mb-10">
+			<a  class=" text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">create user</a>
+		</div>
+		<br>
+		<div class="relative overflow-x-auto">
+		    <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+		        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+		            <tr)>
+		                <th scope="col" class="px-6 py-3">
+		                    NAME
+		                </th>
+		                <th scope="col" class="px-6 py-3">
+		                    PROFILE_ID
+		                </th> 
+		                <th scope="col" class="px-6 py-3">
+		                    ACTION
+		                </th>
+		            </tr>
+		        </thead>
+		        <tbody>
+		           
+		            <tr th:each="user:${users}"
+		            	class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+		                <td th:text="${user.name}"
+		                	class="px-6 py-4">
+		                  
+		                </td>
+		                <td th:text="${user.profile}"
+		                	class="px-6 py-4">
+		                  
+		                </td>		               
+		                <td class="px-6 py-4">
+		                    <a  
+		                       class="text-white bg-yellow-400 hover:bg-yellow-500 focus:outline-none focus:ring-4 focus:ring-yellow-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:focus:ring-yellow-900">EDIT</a>
+		                    <a  
+		                       class="text-white bg-red-700 hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
+		                       onclick="return confirm('Are you sure you want to delete this category?');"
+		                       >DELETE</a>
+		                </td>
+		            </tr>
+		        </tbody>
+		    </table>
+		</div>
+	</body>
+</html>

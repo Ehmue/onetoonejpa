@@ -4,9 +4,11 @@ import exercise.model.Shape;
 
 public class AbstractFactoryPatternDemo 
 {
-	public static void main(String[] args) {
+	public static void main(String[] args) 
+	{
 		
 		FactoryProducer factoryProducer = new FactoryProducer();
+		
 		AbstractFactory shapeFactory = factoryProducer.getFactory("SHAPEFACTORY");
 		AbstractFactory roundedShapeFactory = factoryProducer.getFactory("ROUNDEDSHAPEFACTORY");
 		

@@ -1,0 +1,7 @@
+url					mapping			method			page
+/					get				homepage		index.html
+/user				get				user			user.html
+/user/create		get				createUser		user-create.html
+
+/profile			get				profile			profile.html
+/profile/create		get				createProfile	profile-create.html
