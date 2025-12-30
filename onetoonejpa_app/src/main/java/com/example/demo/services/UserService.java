@@ -20,5 +20,27 @@ public class UserService
 		return userRepository.findAll();
 		
 	}
+	
+	public User save(User user)
+	{
+		return userRepository.save(user);
+	}
+	
+	public User findById(Integer id)
+	{
+		return userRepository.findById(id).get();
+	}
 
+	public boolean deleteByid(Integer id) 
+	{
+		if(userRepository.existsById(id))
+		{
+			userRepository.deleteById(id);
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+	
 }

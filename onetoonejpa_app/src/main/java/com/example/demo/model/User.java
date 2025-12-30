@@ -20,7 +20,6 @@ public class User
 	private String name;
 
 	@OneToOne
-    //@JoinColumn(name = "profile_id")
     private Profile profile;
 	
 	public User() {}

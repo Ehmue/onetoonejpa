@@ -5,3 +5,4 @@ url					mapping			method			page
 
 /profile			get				profile			profile.html
 /profile/create		get				createProfile	profile-create.html
+/profile/create 	post			saveProfile		profile.html
